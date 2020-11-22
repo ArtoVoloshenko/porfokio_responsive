@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  color: white;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background: #444; }
+  body.background-img {
+    background: url(../../assets/img/background.jpg);
+    background-size: cover; }
+    body.background-img::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #444;
+      opacity: 0.9;
+      z-index: -1; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  transition-delay: 10s;
+  z-index: 2;
+  pointer-events: none; }
+  header .menu-btn {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
+    pointer-events: auto; }
+    header .menu-btn .fa-bars {
+      margin-right: -1.5rem;
+      opacity: 1;
+      transition: all 0.5s ease-in-out; }
+    header .menu-btn .fa-times {
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+    header .menu-btn.is-active .fa-bars {
+      opacity: 0;
+      transform: rotate(180deg); }
+    header .menu-btn.is-active .fa-times {
+      opacity: 1;
+      transform: rotate(180deg); }
+  header .menu {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr; }
+    header .menu.is-active .menu-avatar,
+    header .menu.is-active .menu-nav,
+    header .menu.is-active .menu-nav li {
+      transform: translate3d(0, 0, 0); }
+    header .menu .menu-avatar {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate3d(0, 100%, 0);
+      transition: all 0.5s ease-in-out; }
+      header .menu .menu-avatar::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #444;
+        opacity: 0.9;
+        z-index: -1; }
+      header .menu .menu-avatar img {
+        width: 50%;
+        max-width: 250px;
+        border: 2px solid #eece1a;
+        border-radius: 100%; }
+    header .menu .menu-nav {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      transform: translate3d(0, -100%, 0);
+      transition: all 0.5s ease-in-out; }
+      header .menu .menu-nav::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2b2b2b;
+        opacity: 0.9;
+        z-index: -1; }
+      header .menu .menu-nav li {
+        margin: 0.5rem 0;
+        transform: translate3d(100%, 0, 0);
+        transition: all 0.5s ease-in-out; }
+        header .menu .menu-nav li:nth-child(1) {
+          transition-delay: 0.1s; }
+        header .menu .menu-nav li:nth-child(2) {
+          transition-delay: 0.2s; }
+        header .menu .menu-nav li:nth-child(3) {
+          transition-delay: 0.3s; }
+        header .menu .menu-nav li:nth-child(4) {
+          transition-delay: 0.4s; }
+        header .menu .menu-nav li a {
+          pointer-events: auto;
+          transition: all 0.5s ease-in-out; }
+          header .menu .menu-nav li a:hover {
+            color: #eece1a; }
+
+main {
+  position: relative;
+  padding: 4rem;
+  min-height: calc(100vh - 50px);
+  min-width: 320px; }
+  main .heading {
+    font-size: 3rem; }
+    main .heading span {
+      color: #eece1a; }
+  main .sub-heading {
+    font-size: 1.2rem;
+    font-weight: 500; }
+
+main.home .heading {
+  margin-top: 20vh; }
+
+main.home .icons {
+  margin-top: 1rem; }
+  main.home .icons a {
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+    transition: all 0.5s ease-in-out; }
+    main.home .icons a:hover {
+      color: #eece1a; }
+
+main.about .about-info {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-gap: 1rem 2rem;
+  margin: 2rem 0; }
+  main.about .about-info .about-avatar {
+    width: 100%;
+    text-align: center; }
+    main.about .about-info .about-avatar img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 100%;
+      border: 2px solid #eece1a; }
+  main.about .about-info .about-details h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eece1a; }
+
+main.about .about-jobs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
+  main.about .about-jobs .job {
+    padding: 1rem;
+    background: #515151;
+    border-bottom: 5px solid #eece1a; }
+    main.about .about-jobs .job h4 {
+      font-size: 0.9rem;
+      margin-top: 0.5rem; }
+    main.about .about-jobs .job h5 {
+      font-weight: 500;
+      margin-top: 0.2rem;
+      color: #eece1a; }
+    main.about .about-jobs .job p {
+      margin-top: 1rem; }
+
+main.work .projects {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-gap: 1rem; }
+  main.work .projects .project .project-img {
+    position: relative;
+    display: block; }
+    main.work .projects .project .project-img img {
+      width: 100%;
+      border: 2px solid white;
+      transition: all 0.5s ease-in-out; }
+      main.work .projects .project .project-img img:hover {
+        opacity: 0.7;
+        border: 2px solid #eece1a; }
+  main.work .projects .project-btn {
+    display: flex;
+    text-align: center; }
+    main.work .projects .project-btn > a {
+      flex: 1;
+      padding: 0.2rem 0;
+      transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      main.work .projects .project-btn > a:hover {
+        color: #eece1a; }
+    main.work .projects .project-btn .btn-view {
+      background: #c4c4c4;
+      color: black; }
+      main.work .projects .project-btn .btn-view:hover {
+        background: #919191; }
+    main.work .projects .project-btn .btn-git {
+      background: black; }
+      main.work .projects .project-btn .btn-git:hover {
+        background: #111111; }
+
+main.contact .contact-info {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 2rem;
+  margin-top: 1.5rem; }
+  main.contact .contact-info .box {
+    border: 2px solid white;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; }
+    main.contact .contact-info .box span {
+      color: #eece1a;
+      transition: all 0.5s ease-in-out; }
+    main.contact .contact-info .box:hover {
+      padding: 2rem;
+      cursor: pointer;
+      background: #eece1a;
+      color: black; }
+      main.contact .contact-info .box:hover span {
+        color: black; }
+
+footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #373737; }
+
+@media screen and (min-width: 1024px) {
+  main.work .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 640px) {
+  main.about .about-info,
+  main.about .about-jobs {
+    grid-template-columns: 1fr; }
+  main.about .about-info {
+    justify-items: center; }
+    main.about .about-info .about-avatar {
+      min-width: 200px;
+      width: 50%; }
+  main.work .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 480px) {
+  header .menu-btn {
+    top: 1rem;
+    right: 2rem; }
+  header .menu {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr; }
+    header .menu .menu-avatar {
+      transform: translate3d(-100%, 0, 0); }
+      header .menu .menu-avatar::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2b2b2b;
+        opacity: 0.9;
+        z-index: -1; }
+    header .menu .menu-nav {
+      justify-content: start;
+      transform: translate3d(100%, 0, 0); }
+  main {
+    padding: 2rem;
+    text-align: center; }
+  main.work .projects {
+    grid-template-columns: 1fr; } }

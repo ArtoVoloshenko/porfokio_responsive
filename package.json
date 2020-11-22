@@ -1,0 +1,14 @@
+{
+  "name": "responsive-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ArtoVoloshenko",
+  "author": "Arto <art_voloshenko@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "node-sass -w stylesheet/scss/ -o stylesheet/css/"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

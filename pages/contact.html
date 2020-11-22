@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../stylesheet/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <button id="menu-btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </button>
+      <nav id="menu" class="menu">
+        <div class="menu-avatar">
+          <img src="../assets/img/avatar.jpg" />
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="../"> Главная</a>
+          </li>
+          <li class="nav-item"><a href="about.html">Обо мне</a></li>
+          <li class="nav-item"><a href="work.html">Мои успехи</a></li>
+          <li class="nav-item"><a href="#!">Контакты</a></li>
+          <li class="nav-item">
+            <div class="kode">
+              <img src="../assets/img/frameNew.svg" alt="svg">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact">
+      <h1 class="heading">Конт<span>акты</span></h1>
+      <h2 class="sub-heading"></h2>
+      <section class="contact-info">
+        <div class="box">
+          <span>Почта: </span><p>
+          <a href="mailto:Art_voloshenko@mail.ru">Art_voloshenko@mail.ru</a></p>
+        </div>
+        <div class="box">
+          <span >Телефон</span><a href="tel:+7 918 609 03 60"> +7 918 609 03 60</a>
+        </div>
+        <div class="box">
+          <span>Адрес</span>
+          город Екатеринбург, Россия.
+        </div>
+      </section>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139774.65643521116!2d60.47729967117057!3d56.811991493117524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c165eaa062db4b%3A0xd50243d7f7567f20!2z0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1605876992882!5m2!1sru!2sru" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+      </div>
+      <script src="../scripts/scripts.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+      <script>
+        new TypeIt("#simpleUsage11", {
+          strings: "",
+          speed: 100,
+          waitUntilVisible: true
+        }).go();
+        new TypeIt("#simpleUsage12", {
+          strings: "",
+          speed: 100,
+          waitUntilVisible: true
+        }).go();
+        new TypeIt("#multipleStrings13", {
+          strings: ["Буду вам признателен если вы не оставите Мои старания не замеченными ", "До связи!"],
+          speed: 50,
+          waitUntilVisible: true
+        }).go();
+
+
+      </script>
+    </main>
+    <footer>Coypyright &copy; 2020 Артем Волощенко</footer>
+  </body>
+</html>

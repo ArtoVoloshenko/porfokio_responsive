@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../stylesheet/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <button id="menu-btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </button>
+      <nav id="menu" class="menu">
+        <div class="menu-avatar">
+          <img src="../assets/img/avatar.jpg" />
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="../">Главная</a>
+          </li>
+          <li class="nav-item"><a href="about.html">Обо мне</a></li>
+          <li class="nav-item"><a href="#!">Мои Успехи, вы уже здесь</a></li>
+          <li class="nav-item"><a href="contact.html">Мои контакты</a></li>
+          <li class="nav-item">
+            <div class="kode">
+              <img src="../assets/img/frameNew.svg" alt="svg">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="work">
+      <h1 class="heading" id="simpleUsage6">Мои  <span>Работы</span></h1>
+      <h2 class="sub-heading" id="simpleUsage7">Вы можете взлянуть на мой <a href="https://github.com/ArtoVoloshenko" class="git_link"> GitHub,</a> а также оценить мои работы.</h2>
+      <section class="projects">
+        <div class="project">
+          <a class="project-img" href="https://login-page.hostman.site" target="_blank">
+            <img src="../assets/img/project1.jpg" alt="project1" />
+          </a>
+          <div class="project-btn">
+            <a class="btn-view" href="https://login-page.hostman.site" target="_blank">
+              <i class="fa fa-eye"></i>
+              <span>Login page</span>
+            </a>
+            <a class="btn-git" href="#">
+              <i class="fab fa-github"></i>
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+        <div class="project">
+          <a class="project-img" href="https://my-first-layout.hostman.site">
+            <img src="../assets/img/project2.jpg" alt="project2" />
+          </a>
+          <div class="project-btn">
+            <a class="btn-view" href="https://my-first-layout.hostman.site" target="_blank">
+              <i class="fa fa-eye"></i>
+              <span>Layout</span>
+            </a>
+            <a class="btn-git" href="https://github.com/ArtoVoloshenko/my-First-layout" target="_blank">
+              <i class="fab fa-github"> </i>
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+        <div class="project">
+          <a class="project-img" href="https://shopdetails.hostman.site/" target="_blank">
+            <img src="../assets/img/project3.jpg" alt="project3" />
+          </a>
+          <div class="project-btn">
+            <a class="btn-view" href="https://shopdetails.hostman.site/" target="_blank">
+              <i class="fa fa-eye"></i>
+              <span>First-layout</span>
+            </a>
+            <a class="btn-git" href="https://github.com/ArtoVoloshenko/Shopdetails" target="_blank">
+              <i class="fab fa-github"> </i>
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <script src="../scripts/scripts.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+      <script>
+        new TypeIt("#simpleUsage6", {
+          strings: "",
+          speed: 100,
+          waitUntilVisible: true
+        }).go();
+        new TypeIt("#simpleUsage7", {
+          strings: "",
+          speed: 80,
+          waitUntilVisible: true
+        }).go();
+        new TypeIt("#simpleUsage8", {
+          strings: "",
+          speed: 100,
+          waitUntilVisible: true
+        }).go();
+      </script>
+    </main>
+    <footer>Coypyright &copy; 2020 Артем Волощенко</footer>
+  </body>
+</html>
